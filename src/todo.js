@@ -52,5 +52,6 @@ function show() {
   }
 }
 
+const butInstall = document.getElementById('butInstall');
 document.getElementById('add').addEventListener('click', add);
 show();
