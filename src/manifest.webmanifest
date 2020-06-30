@@ -1,7 +1,7 @@
 {
     "short_name": "Ed Note",
     "name": "Ed Note App - PWA",
-    "description": "PWA for testing purposes.",
+    "description": "Note App - PWA for testing purposes.",
     "icons": [
       {
         "src": "/img/icon.svg",
@@ -11,8 +11,8 @@
     
     ],
     "start_url": "/",
-    "background_color": "#18D9C4",
+    "background_color": "blue",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#18D9C4"
+    "theme_color": "purple"
   }
