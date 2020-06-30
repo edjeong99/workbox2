@@ -4,9 +4,9 @@
     "description": "Note App - PWA for testing purposes.",
     "icons": [
       {
-        "src": "/img/icon.svg",
-        "type": "image/svg",
-        "sizes": "192x192"
+        "src": "/img/icon.png",
+        "type": "image/png",
+        "sizes": "256x256"
       }
     
     ],
