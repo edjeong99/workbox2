@@ -16,6 +16,14 @@
   },
   "devDependencies": {
     "copyfiles": "^1.2.0",
-    "workbox-cli": "^3.5.0"
+    "workbox-cli": "^3.5.0",
+    "gh-pages": "^3.1.0",
+    "git-scripts": "^0.4.3",
+    "surge": "^0.21.3"
+  },
+  "git": {
+    "scripts": {
+      "pre-push": "surge --project ./build/ --domain edworkbox2.surge.sh/"
+    }
   }
 }
