@@ -19,10 +19,12 @@ body {
   flex-direction: column;
   font-family: 'Roboto','Helvetica','Arial',sans-serif;
   justify-content: space-between;
-  margin: 0;
+  margin: 30px 0 0 0;
+  
   max-width: 100%;
   min-height: 100vh;
   text-align: center;
+  position: relative;
 }
 
 header {
@@ -146,6 +148,29 @@ li {
   color: white;
 }
 
+#addTask{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+  color: #3a1b48;
+  background-color: #d575ff;
+}
+
+#todos{
+position : relative;
+top : 60px;
+z-index:-1;
+}
+
+.remove{
+  margin : 5px 10px;
+
+}
+
 @media (min-width: 800px) {
   .column {
      width: calc(50% - 20px);
@@ -171,5 +196,44 @@ li {
 .add-button {
   position: absolute;
   top: 1px;
-  left: 1px;
+  left: 40%;
+  margin : 20px 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+
+
+    margin: 10px 0 0 0;
+    max-width: 100%;
+    min-height: 100vh;
+    text-align: center;
+  }
+  .add-button {
+    margin : 10px 0;
+  }
+
+  #addTask{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    color: #3a1b48;
+    background-color: #d575ff;
+  }
+
+  #todos{
+    position: fixed;
+    overflow: hidden;
+    left: 0px;
+    right: 0px;
+    top:60px;
+  }
+    
+
+
 }
