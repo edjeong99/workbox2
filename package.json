@@ -2,7 +2,6 @@
   "name": "workbox-lab",
   "version": "1.0.0",
   "description": "a lab for learning workbox",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "copy": "copyfiles -u 1 src/**/**/* src/**/* src/* build",

@@ -1,18 +1,4 @@
-/*
-Copyright 2018 Google Inc.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-*/
+// get workbox from CDN
 importScripts(
   'https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js'
 );
@@ -20,12 +6,15 @@ importScripts(
 if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);
 
+  // cache files in the manifest.
+  // it is an empty [] now but will be filled by workbox-config.js
   workbox.precaching.precacheAndRoute([]);
 
+  //add route
   workbox.routing.registerRoute(
-    /(.*)articles(.*)\.(?:png|gif|jpg)/,
-    workbox.strategies.cacheFirst({
-      cacheName: 'images-cache',
+    /(.*)\.(?:html|css|js)/,
+    new workbox.strategies.StaleWhileRevalidate({
+      cacheName: 'source-cache',
       plugins: [
         new workbox.expiration.Plugin({
           maxEntries: 50,
