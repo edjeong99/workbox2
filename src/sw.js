@@ -1,4 +1,9 @@
-// get workbox from CDN
+// import { Workbox } from 'workbox-window';
+//import { BroadcastUpdatePlugin } from 'workbox-broadcast-update';
+
+//import { ww } from 'workbox-window';
+
+//get workbox from CDN
 importScripts(
   'https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js'
 );
@@ -10,17 +15,16 @@ if (workbox) {
   // it is an empty [] now but will be filled by workbox-config.js
   workbox.precaching.precacheAndRoute([]);
 
-  //add route
+  //add route and use broadcastUpdatePlugin to update cache
   workbox.routing.registerRoute(
     /(.*)\.(?:html|css|js)/,
     new workbox.strategies.StaleWhileRevalidate({
-      cacheName: 'source-cache',
-      plugins: [
-        new workbox.expiration.Plugin({
-          maxEntries: 50,
-          maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
-        }),
-      ],
+      // plugins: [
+      //   new workbox.broadcastUpdate.Plugin({
+      //     channelName: 'cache-update',
+      //   }),
+      //   //new workbox.broadcast.update.BroadcastUpdatePlugin()
+      // ],
     })
   );
 } else {

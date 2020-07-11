@@ -150,7 +150,7 @@ li {
 
 #addTask{
   position: fixed;
-  top: 0px;
+  top: 50px;
   right: 0px;
   left: 0px;
   height: 60px;
@@ -216,7 +216,7 @@ z-index:-1;
 
   #addTask{
     position: fixed;
-    top: 0px;
+    top:50px;
     right: 0px;
     left: 0px;
     height: 60px;
