@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "nodemon": "^2.0.4",
     "workbox-broadcast-update": "^5.1.3",
     "workbox-window": "^5.1.3"
